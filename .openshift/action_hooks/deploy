@@ -4,14 +4,12 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 set -x
-if [ -d $OPENSHIFT_DATA_DIR/activemq ]
+if [ -d $OPENSHIFT_DATA_DIR/activemq-data ]
 then
-    exit 0
-else
-	mkdir $OPENSHIFT_DATA_DIR/activemq-data
-    cp -rf $OPENSHIFT_REPO_DIR/diy/activemq $OPENSHIFT_DATA_DIR
-    cd $OPENSHIFT_DATA_DIR/activemq
-    rm -rf logs
-    ln -s $OPENSHIFT_DIY_LOG_DIR logs
+    mkdir $OPENSHIFT_DATA_DIR/activemq-data
 fi
+cp -rf $OPENSHIFT_REPO_DIR/diy/activemq $OPENSHIFT_DATA_DIR
+cd $OPENSHIFT_DATA_DIR/activemq
+rm -rf logs
+ln -s $OPENSHIFT_DIY_LOG_DIR logs
 
