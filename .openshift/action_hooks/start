@@ -5,6 +5,7 @@
 set -x
 export ACTIVEMQ_DATA=$OPENSHIFT_DATA_DIR/activemq-data
 cd $OPENSHIFT_DATA_DIR/activemq
+export OPENSHIFT_INTERNAL_IP=$OPENSHIFT_DIY_IP
 sed -ig 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_INTERNAL_IP'/g' conf/activemq.xml
 sed -ig 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_INTERNAL_IP'/g' conf/jetty.xml
 bin/activemq start
