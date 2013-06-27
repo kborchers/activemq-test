@@ -133,7 +133,7 @@
             http://activemq.apache.org/configuring-transports.html
         -->
         <transportConnectors>
-            <transportConnector name="websocket" uri="ws://OPENSHIFT_INTERNAL_IP:8000"/>
+            <transportConnector name="websocket" uri="ws://OPENSHIFT_INTERNAL_IP:15005"/>
         </transportConnectors>
 
 
