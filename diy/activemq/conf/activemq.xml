@@ -133,7 +133,7 @@
             http://activemq.apache.org/configuring-transports.html
         -->
         <transportConnectors>
-            <transportConnector name="websocket" uri="ws://OPENSHIFT_INTERNAL_IP:20000"/>
+            <transportConnector name="websocket" uri="ws://OPENSHIFT_INTERNAL_IP:8080"/>
         </transportConnectors>
 
 
@@ -144,7 +144,7 @@
 
         Take a look at ${ACTIVEMQ_HOME}/conf/jetty.xml for more details
     -->
-    <import resource="jetty.xml"/>
+    <!--<import resource="jetty.xml"/>-->
 
 </beans>
 <!-- END SNIPPET: example -->
